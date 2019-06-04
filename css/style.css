@@ -1,0 +1,181 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+body {
+  background: #156c2a;
+  min-height: 100%;
+  
+}
+
+
+.wrap {
+  
+  position: relative;
+  height: 100%;
+  min-height: 100px;
+}
+
+.game {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  min-height: 50%;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 22%;
+  padding-right: 13%;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  float: left;
+  padding-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 14.66666%;
+  height: 26%;
+  padding: 5px;
+  display: block;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 50;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.card .inside {
+  width: 100%;
+  height: 100%; 
+  display: block;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.card .inside.picked, .card .inside.matched {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card .inside.matched {
+  -webkit-animation: 1s matchAnim ease-in-out;
+          animation: 1s matchAnim ease-in-out;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.card .front, .card .back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+}
+.card .front img, .card .back img, .card .matched img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+  margin: 0%;
+  max-height: 100%;
+}
+.card .front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+}
+.card .back {
+  -webkit-transform: rotateX(-180deg );
+          transform: rotateX(-180deg);
+}
+
+
+.footer_block {
+ margin-top: 54px;
+  padding-left: 23%;
+  padding-right: 22%;
+  padding-bottom: 20px;
+  color: #deebe1;
+
+}
+
+
+.endImg {
+  margin-top: 74px;
+}
+
+.Congratulations {
+  opacity: 0.85;
+  font-family:  Century Gothic;
+  font-size: 34px;
+   font-weight: lighter;
+  color: #FFFFFF;
+  letter-spacing: 0.15px;
+  line-height: 35px;
+  margin-top: 9px;
+}
+
+.restartButton {
+  opacity: 0.8;
+font-family: OpenSans-Semibold;
+font-size: 20px;
+color: #FFFFFF;
+letter-spacing: 0;
+  border: 0px;
+  background: #156c2a;
+} 
+.restartButton:hover {  color: #212121 ;}
+
+
+#score_bar {
+  float: right;
+  opacity: 0.8;
+font-family: OpenSans-Bold;
+font-size: 20px;
+color: #FFFFFF;
+letter-spacing: 0;
+}
+
+.nameOfTheGame {
+  opacity: 0.85;
+  font-family: OpenSans-Bold;
+  font-size: 28px;
+  color: #deebe1;
+  margin-top: 20px;
+  letter-spacing: 0.2px;
+}
+
+#StartImg {
+  margin-top: 94px;
+}
+.startGame {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1C7430;
+  margin-top: 34px;
+  letter-spacing: 0;
+  padding: .5em 1em calc(.5em + 3px);
+  border-radius: 6px;
+  background: #deebe1;
+  transition: 0.2s;
+} 
+
+.startGame:hover { background: #212121; color: #deebe1 ;}
+
+.startGame:active {
+  background: #212121;
+}

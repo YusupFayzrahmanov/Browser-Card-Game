@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+  <title>Memory Game | End Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+      <link rel="stylesheet" href="css/style.css">
+   <script language="javascript" type="text/javascript">
+        function OnLoad() {
+            var score = window.location.href.split("?")[1].split("=")[1];
+            document.getElementById("resultScore").innerHTML = score;
+        }
+    </script>
+
+ </head>
+ <body onload="OnLoad()">
+ 	<div class="block_of_start_and_game" align="center">
+ 		<img class="endImg" src="assets\Group2.png" >
+ 		<div class="Congratulations">Поздравляем!<br>
+ 			Ваш итоговый счет: <span id="resultScore"></span></div>
+ 		<button  class="startGame" data-tid="EndGame-retryGame" onClick='location.href="page-1-game-page.html"'>Еще раз</button>
+ 	</div>
+ </body>
+</html>
